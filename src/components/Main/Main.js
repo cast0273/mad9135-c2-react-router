@@ -1,5 +1,6 @@
 import './main.css'
 
+import Home from '../Home/Home'
 import UserList from '../UserList/UserList'
 import UserAddress from '../UserAddress/UserAddress'
 import Error from '../Error/Error'
@@ -10,7 +11,9 @@ export default function Main () {
   return (
     <div className='Main'>
       <Switch>
-        <Route path='/'>Instructions</Route>
+        <Route path='/' exact>
+          <Home />
+        </Route>
 
         <Route path='/userList'>
           <UserList />
