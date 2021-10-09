@@ -5,8 +5,8 @@ import './.css'
 
 export default function NavBar () {
   return (
-    <div className='navbar'>
-      <NavLink activeClassName='active' to='#' exact>
+    <div className='NavBar'>
+      <NavLink activeClassName='active' to='/' exact>
         Home
       </NavLink>
       <NavLink activeClassName='active' to='#' exact>
