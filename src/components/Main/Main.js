@@ -15,17 +15,15 @@ async function fetchData () {
     nat: 'au,ca,nz,gb,us'
   }
 
-  let url = `
-  https://randomuser.me/api/
-    ?results=${params.results}
-    ?seed=${params.seed}
-    ?format=${params.format}
-    ?nat=${params.nat}
-    `
+  let url = `https://rbndomuser.me/api/?results=${params.results}&seed=${params.seed}&format=${params.format}&nat=${params.nat}`
 
-  let resp = await fetch(url)
-  let data = await resp.json()
-  console.log(data)
+  try {
+    let resp = await fetch(url)
+    let data = await resp.json()
+    console.log(data)
+  } catch (error) {
+    console.error(`An error has occurred: ${error}`)
+  }
 }
 
 export default function Main () {
@@ -33,7 +31,7 @@ export default function Main () {
     <div className='Main'>
       <Switch>
         <Route path='/' exact>
-          <Home />
+          <Home fetchData={fetchData} />
         </Route>
 
         <Route path='/userList'>
