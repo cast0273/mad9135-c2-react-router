@@ -1,0 +1,15 @@
+a:link,
+a:visited,
+a:active {
+  color: rgb(235, 235, 235);
+  text-decoration: none;
+}
+.NavBar {
+  font-size: 1.25em;
+  display: flex;
+  margin: 0 10vw;
+  padding: 1em;
+}
+.NavBar a {
+  padding: 0 0.563em;
+}

@@ -39,24 +39,7 @@ h6 {
   color: rgb(235, 235, 235);
 }
 
-a:link,
-a:visited,
-a:active {
-  color: rgb(235, 235, 235);
-  text-decoration: none;
-}
-
 header {
   width: 100vw;
   background-color: rgb(84, 84, 84);
-}
-
-.NavBar {
-  font-size: 1.563em;
-  display: flex;
-  margin: 0 10vw;
-  padding: 1em;
-}
-.NavBar a {
-  padding: 0 0.563em;
 }
