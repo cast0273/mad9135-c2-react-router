@@ -7,6 +7,27 @@ import Error from '../Error/Error'
 
 import { Switch, Route, Redirect } from 'react-router-dom'
 
+async function fetchData () {
+  let params = {
+    results: 16,
+    seed: 'cast0273',
+    format: 'json',
+    nat: 'au,ca,nz,gb,us'
+  }
+
+  let url = `
+  https://randomuser.me/api/
+    ?results=${params.results}
+    ?seed=${params.seed}
+    ?format=${params.format}
+    ?nat=${params.nat}
+    `
+
+  let resp = await fetch(url)
+  let data = await resp.json()
+  console.log(data)
+}
+
 export default function Main () {
   return (
     <div className='Main'>
