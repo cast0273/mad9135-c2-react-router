@@ -12,11 +12,11 @@ export default function Main () {
       <Switch>
         <Route path='/'>Instructions</Route>
 
-        <Route path='/userlist'>
+        <Route path='/userList'>
           <UserList />
         </Route>
 
-        <Route path='/useraddress'>
+        <Route path='/userAddress'>
           <UserAddress />
         </Route>
 
