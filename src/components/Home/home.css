@@ -1,0 +1,16 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Home > * {
+  margin: 1em;
+}
+
+.Home > a {
+  padding: 1em 2em;
+  background-color: rgb(120, 120, 120);
+  border-radius: 16px;
+}
