@@ -6,7 +6,9 @@ import './.css'
 export default function NavBar () {
   return (
     <div className='NavBar'>
-      <NavLink activeClassName='active' to='/' exact />
+      <NavLink activeClassName='active' to='/' exact>
+        Home
+      </NavLink>
       <NavLink activeClassName='active' to='/userList' exact>
         User List
       </NavLink>
@@ -14,7 +16,7 @@ export default function NavBar () {
         Address List
       </NavLink>
       <NavLink activeClassName='active' to='/404'>
-        Error 404: Page not found.
+        Error
       </NavLink>
     </div>
   )
