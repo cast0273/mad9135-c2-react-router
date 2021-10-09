@@ -24,7 +24,7 @@ export default function Main () {
           <Error />
         </Route>
 
-        <Redirect to='404' />
+        <Redirect to='error' />
       </Switch>
     </div>
   )
