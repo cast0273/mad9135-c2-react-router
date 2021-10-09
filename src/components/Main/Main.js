@@ -15,7 +15,7 @@ async function fetchData () {
     nat: 'au,ca,nz,gb,us'
   }
 
-  let url = `https://rbndomuser.me/api/?results=${params.results}&seed=${params.seed}&format=${params.format}&nat=${params.nat}`
+  let url = `https://randomuser.me/api/?results=${params.results}&seed=${params.seed}&format=${params.format}&nat=${params.nat}`
 
   try {
     let resp = await fetch(url)
