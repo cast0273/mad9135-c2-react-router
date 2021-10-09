@@ -8,8 +8,14 @@ import Error from '../Error/Error'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 async function fetchData () {
+  //Every time we do a fetch, we choose the count of results returned to be between 16 and 32
+  function getRandomNum () {
+    return Math.floor(Math.random() * 17) + 16
+  }
+
+  //params object lets us easily change any desired parameter later on
   let params = {
-    results: 16,
+    results: getRandomNum(),
     seed: 'cast0273',
     format: 'json',
     nat: 'au,ca,nz,gb,us'
