@@ -45,5 +45,7 @@
 }
 .user a:hover {
   background-color: rgba(0, 0, 0, 0);
-  filter: grayscale();
+  /* filter: grayscale(); */
+  text-shadow: 0 0 40px rgb(0, 81, 255);
+  color: white;
 }
