@@ -1,6 +1,13 @@
 .user-list {
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2em;
+  gap: 4em;
+}
+@media screen and (max-width: 1150px) {
+  .user-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .user {
@@ -8,7 +15,7 @@
   background-color: rgba(255, 255, 255, 0.075);
   border-radius: 8px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.14);
-  margin: 4em 0;
+  /* margin: 4em 0; */
   display: flex;
   flex-direction: column;
 }
