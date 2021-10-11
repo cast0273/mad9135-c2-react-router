@@ -11,6 +11,14 @@
 
 .Home > a {
   padding: 1em 2em;
-  background-color: rgb(120, 120, 120);
+  color: rgb(39, 90, 201);
+  font-size: 800;
+  background-color: rgb(235, 235, 235);
   border-radius: 16px;
+  box-shadow: 1px 1px 10px rgb(39, 90, 201);
+}
+
+.Home > a:hover {
+  color: rgb(32, 98, 240);
+  box-shadow: 1px 5px 20px rgb(39, 90, 201);
 }
