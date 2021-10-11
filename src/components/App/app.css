@@ -41,5 +41,7 @@ h6 {
 
 header {
   width: 100vw;
-  background-color: rgb(84, 84, 84);
+  background-color: rgb(60, 60, 70);
+
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.14);
 }

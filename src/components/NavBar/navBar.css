@@ -3,13 +3,21 @@ a:visited,
 a:active {
   color: rgb(235, 235, 235);
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: rgb(189, 189, 189);
+  /* transform: scale(0.9); */
+  background-color: rgb(42, 42, 53);
 }
 .NavBar {
   font-size: 1.25em;
   display: flex;
   margin: 0 10vw;
-  padding: 1em;
+  /* padding: 1em; */
 }
 .NavBar a {
-  padding: 0 0.563em;
+  padding: 0.75em 0.75em;
+  margin: 0.25em;
+  border-radius: 12px;
 }
