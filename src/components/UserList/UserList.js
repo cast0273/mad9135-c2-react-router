@@ -1,10 +1,9 @@
 import './userList.css'
 
 import { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function UserList ({ data }) {
-  console.log(data)
-
   useEffect(() => {
     console.log('useEffect was called.')
   }, [data])
@@ -12,12 +11,19 @@ export default function UserList ({ data }) {
   return (
     <div className='UserList'>
       {data.length === 0 && <p>Loading...</p>}
-      <div className='planet-list'>
+      <div className='user-list'>
         {data.map((item, index) => (
-          <p key={index}>
-            {/* <NavLink to={`/planets/${index + 1}`}>{item.name}</NavLink> */}
-            <span>{item.name.first}</span>
-          </p>
+          <div key={index} className='user'>
+            <div className='wrapper'>
+              <img src={item.picture.medium} alt='User thumbnail' />
+              <div className='userDetails'>
+                <p>{`${item.name.first} ${item.name.last}`}</p>
+                <p>{item.email}</p>
+                <p>{item.cell}</p>
+              </div>
+            </div>
+            <NavLink to={`/userList/${index + 1}`}>View Details</NavLink>
+          </div>
         ))}
       </div>
 
