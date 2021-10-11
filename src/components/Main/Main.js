@@ -46,7 +46,7 @@ export default function Main () {
         </Route>
 
         <Route path='/userList'>
-          <UserList />
+          <UserList data={userList} />
         </Route>
 
         <Route path='/userAddress'>
