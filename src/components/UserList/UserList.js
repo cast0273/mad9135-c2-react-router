@@ -1,20 +1,13 @@
 import './userList.css'
 
-import User from '../User/User'
-
 import { useEffect } from 'react'
-import { Route, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function UserList ({ data }) {
   //
   useEffect(() => {
     console.log('useEffect was called.')
   }, [data])
-
-  function findUser (id) {
-    return data.find((item, index) => parseInt(id) === index)
-    //return an object for the single user
-  }
 
   return (
     <div className='UserList'>
@@ -30,16 +23,12 @@ export default function UserList ({ data }) {
                 <p>{item.cell}</p>
               </div>
             </div>
-            <NavLink to={`/userList/${index}`}>View Details</NavLink>
+            <Link to={{ pathname: `/userList/${index}`, state: { item } }}>
+              View Details
+            </Link>
           </div>
         ))}
       </div>
-
-      {/* <div className='user-details'> */}
-      <Route path='/userList/:id'>
-        <User findUser={findUser} />
-      </Route>
-      {/* </div> */}
     </div>
   )
 }
