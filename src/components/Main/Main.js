@@ -55,7 +55,7 @@ export default function Main () {
         </Route>
 
         <Route path='/userAddress' exact>
-          <UserAddress />
+          <UserAddress data={userList} />
         </Route>
 
         <Route path='/error' exact>
