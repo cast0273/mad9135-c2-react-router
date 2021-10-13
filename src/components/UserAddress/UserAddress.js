@@ -21,17 +21,16 @@ export default function UserAddress ({ data }) {
   }
 
   function buildData (fromSortedData) {
-    let frag = data.map(item => {
+    return data.map(item => {
       return (
-        <>
+        <div>
           <p>{`${item.name.first} ${item.name.last}`}</p>
           <p>{item.location.street.name}</p>
           <p>{`${item.location.city} ${item.location.state}`}</p>
           <p>{item.location.postcode}</p>
-        </>
+        </div>
       )
     })
-    return frag
   }
 
   return (
