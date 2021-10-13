@@ -1,0 +1,24 @@
+.userMoreDetails {
+  margin-top: 1em;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.075);
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.14);
+  /* margin: 4em 0; */
+  display: flex;
+  flex-direction: column;
+}
+
+.userMoreDetails .location h3,
+.userMoreDetails .login h3 {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.userMoreDetails > div {
+  padding: 1em;
+}
+
+.userMoreDetails > div p {
+  padding: 0.25em 0;
+}
