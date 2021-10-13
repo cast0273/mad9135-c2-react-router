@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { Route, NavLink } from 'react-router-dom'
 
 export default function UserList ({ data }) {
+  //
   useEffect(() => {
     console.log('useEffect was called.')
   }, [data])
@@ -34,11 +35,11 @@ export default function UserList ({ data }) {
         ))}
       </div>
 
-      <div className='user-details'>
-        <Route path='/userList/:id'>
-          <User findUser={findUser} />
-        </Route>
-      </div>
+      {/* <div className='user-details'> */}
+      <Route path='/userList/:id'>
+        <User findUser={findUser} />
+      </Route>
+      {/* </div> */}
     </div>
   )
 }
