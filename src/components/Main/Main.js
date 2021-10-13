@@ -7,6 +7,7 @@ import Error from '../Error/Error'
 
 import { useState } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
+import User from '../User/User'
 
 export default function Main () {
   const [userList, setUserList] = useState([])
@@ -45,15 +46,19 @@ export default function Main () {
           <Home fetchData={fetchData} />
         </Route>
 
-        <Route path='/userList'>
+        <Route path='/userList' exact>
           <UserList data={userList} />
         </Route>
 
-        <Route path='/userAddress'>
+        <Route path='/userList/:id' exact>
+          <User data={userList} />
+        </Route>
+
+        <Route path='/userAddress' exact>
           <UserAddress />
         </Route>
 
-        <Route path='/error'>
+        <Route path='/error' exact>
           <Error />
         </Route>
 
