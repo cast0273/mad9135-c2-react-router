@@ -4,7 +4,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: rgba(255, 0, 0, 0.351);
 
   display: flex;
   justify-content: center;
@@ -13,4 +12,133 @@
 
 .Loading {
   display: none;
+}
+
+/* 
+Loading animation from my personal library:
+Created by J-C Castagne @ GitHub: https://github.com/JCcastagne/Animations-Library/
+*/
+
+.loadingBar {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50vh;
+  left: calc(50vw - 177.5px);
+}
+
+.outerContainer {
+  display: flex;
+  height: 35px;
+  min-width: 355px;
+  border-radius: 36px;
+  background-color: rgb(57, 57, 57);
+  box-shadow: 0px 0px 15px rgb(255, 1, 255);
+  animation: glowOuter 4s ease-in-out infinite;
+}
+
+.innerContainer {
+  display: flex;
+  height: 30px;
+  width: 350px;
+  border-radius: 36px;
+  position: relative;
+  transform: translate(2.55px, 2.5px);
+  background-color: rgb(42, 42, 53);
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgb(0, 238, 255);
+  animation: glowInner 4s 2s ease-in infinite;
+}
+
+.innerContainer span {
+  transform: translate(25px, 12.5px);
+}
+
+.firstBar::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background-color: rgb(0, 238, 255);
+  color: #fff;
+  height: 5px;
+  width: 100px;
+  border-radius: 36px;
+  box-shadow: 0px 0px 15px rgb(0, 238, 255);
+  animation: slide 2s 1.5s ease-in-out infinite;
+  transform: translateX(-127.5px);
+}
+
+.secondBar::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background-color: rgb(198, 0, 255);
+  color: #fff;
+  height: 5px;
+  width: 100px;
+  border-radius: 36px;
+  box-shadow: 0px 0px 15px rgb(198, 85, 255);
+  animation: slide 2s 1s ease-in-out infinite;
+  transform: translateX(-127.5px);
+}
+
+.thirdBar::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background-color: rgb(1, 255, 166);
+  color: #fff;
+  height: 5px;
+  width: 100px;
+  border-radius: 36px;
+  box-shadow: 0px 0px 15px rgb(1, 255, 166);
+  animation: slide 2s 0.5s ease-in-out infinite;
+  transform: translateX(-127.5px);
+}
+
+.fourthBar::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background-color: rgb(255, 1, 255);
+  color: #fff;
+  height: 5px;
+  width: 100px;
+  border-radius: 36px;
+  box-shadow: 0px 0px 15px rgb(255, 1, 255);
+  animation: slide 2s ease-in-out infinite;
+  transform: translateX(-127.5px);
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 455px;
+  }
+}
+
+@keyframes glowOuter {
+  0% {
+    box-shadow: 0px 0px 0px rgba(255, 1, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0px 0px 60px rgba(255, 1, 255, 0.15);
+  }
+  100% {
+    box-shadow: 0px 0px 0px rgba(255, 1, 255, 0.15);
+  }
+}
+
+@keyframes glowInner {
+  0% {
+    box-shadow: 0px 0px 15px rgba(0, 238, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0px 0px 30px rgba(0, 238, 255, 0.15);
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(0, 238, 255, 0.15);
+  }
 }

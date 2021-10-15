@@ -9,7 +9,16 @@ export default function Loading ({ loadingState }) {
 
   return (
     <span className={`Loading ${loadingState ? 'active' : 'notActive'}`}>
-      <div>LOADING</div>
+      <div class='loadingBar'>
+        <div class='outerContainer'>
+          <div class='innerContainer'>
+            <span class='firstBar'></span>
+            <span class='secondBar'></span>
+            <span class='thirdBar'></span>
+            <span class='fourthBar'></span>
+          </div>
+        </div>
+      </div>
     </span>
   )
 }
