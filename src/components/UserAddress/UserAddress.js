@@ -21,9 +21,9 @@ export default function UserAddress ({ data }) {
   }
 
   function buildData (fromSortedData) {
-    return data.map(item => {
+    return data.map((item, index) => {
       return (
-        <div>
+        <div key={index}>
           <p>{`${item.name.first} ${item.name.last}`}</p>
           <p>{item.location.street.name}</p>
           <p>{`${item.location.city} ${item.location.state}`}</p>
