@@ -11,10 +11,10 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 import User from '../User/User'
 
 export default function Main () {
-  const [userList, setUserList] = useState([])
+  const [userList, setUserList] = useState(false)
 
   async function fetchData () {
-    switchLoading()
+    setLoading(true)
     //Every time we do a fetch, we choose the count of results returned to be between 16 and 32
     function getRandomNum () {
       return Math.floor(Math.random() * 17) + 16
@@ -35,22 +35,15 @@ export default function Main () {
       let resp = await fetch(url)
       let data = await resp.json()
 
-      console.log(data)
+      // console.log(data)
       setUserList(data.results)
-      switchLoading()
+      setLoading(false)
     } catch (error) {
       console.error(`An error has occurred: ${error}`)
     }
   }
 
   const [loading, setLoading] = useState(false)
-  function switchLoading () {
-    if (loading) {
-      setLoading(false)
-    } else {
-      setLoading(true)
-    }
-  }
 
   return (
     <div className='Main'>
@@ -58,11 +51,11 @@ export default function Main () {
 
       <Switch>
         <Route path='/' exact>
-          <Home fetchData={fetchData} />
+          <Home />
         </Route>
 
         <Route path='/userList' exact>
-          <UserList data={userList} />
+          <UserList fetchData={fetchData} data={userList} />
         </Route>
 
         <Route path='/userList/:id' exact>
